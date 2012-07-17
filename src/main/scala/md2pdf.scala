@@ -67,6 +67,7 @@ object CmdFromConf {
                                       "--from=markdown",
                                       "--latex-engine=xelatex",
                                       "--smart",
+                                      "-V tables",
                                       if(conf.toc) "--toc" else "",
                                       "--tab-stop="+conf.tabStop.toString,
                                       "--template="+ conf.template,
