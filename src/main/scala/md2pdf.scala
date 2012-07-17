@@ -20,7 +20,7 @@ object md2pdf {
         opt("o", "output", "output file") { 
           (v: String, c: md2pdfConf) => c.copy(output = v)
         },
-        opt("t", "template", "template to use; defaults to template.tex" ) {
+        opt("t", "template", "template to use; defaults to default.tex" ) {
           (v: String, c: md2pdfConf) => c.copy(template = v)
         },
         intOpt("s", "tab-stop", "number of spaces considered a tab stop; defaults to 2") {
@@ -55,7 +55,7 @@ case class Exit(val code: Int) extends xsbti.Exit
 case class md2pdfConf(
                         input: String = "",
                         output: String =  "${HOME}/md2pdfOutput.pdf",
-                        template: String = "template.tex",
+                        template: String = "default.tex",
                         tabStop: Int = 2,
                         toc: Boolean = true
                       )
