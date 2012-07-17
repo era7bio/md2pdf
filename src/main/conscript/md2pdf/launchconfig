@@ -1,0 +1,11 @@
+[app]
+  version: 0.1.0
+  org: com.era7
+  name: md2pdf
+  class: com.era7.md2pdf
+[scala]
+  version: 2.9.2
+[repositories]
+  local
+  sonatype-oss-releases
+  maven-central
