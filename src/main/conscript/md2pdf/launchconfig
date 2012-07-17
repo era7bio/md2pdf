@@ -7,5 +7,5 @@
   version: 2.9.2
 [repositories]
   local
-  scala-tools-releases
+  sonatype-oss-releases
   maven-central
