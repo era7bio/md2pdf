@@ -14,7 +14,7 @@ object md2pdf {
    * returns the process status code */
   def run(args: Array[String]): Int = {
 
-    val parser = new scopt.immutable.OptionParser[md2pdfConf] {
+    val parser = new scopt.immutable.OptionParser[md2pdfConf]("md2pdf", "0.1.2") {
 
       def options = Seq(
         opt("o", "output", "output file") { 
@@ -33,7 +33,6 @@ object md2pdf {
           (v: String, c: md2pdfConf) => c.copy(input = v)
         }
       )
-
     }
 
     parser.parse(args, md2pdfConf()) map { config =>
